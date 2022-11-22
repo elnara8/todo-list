@@ -1,0 +1,35 @@
+/* Filter */
+.filter.asc {
+  background-image: url("../icons/filter-asc.png");
+}
+
+.filter.asc:hover,
+.filter.asc.active {
+  background-image: url("../icons/filter-asc-active.png");
+}
+
+.filter.desc {
+  background-image: url("../icons/filter-desc.png");
+}
+
+.filter.desc:hover,
+.filter.desc.active {
+  background-image: url("../icons/filter-desc-active.png");
+}
+
+/* Todo item drag and drop */
+.todo-item.over {
+  border-bottom: 3px dashed #666;
+}
+
+.todo-item.over * {
+  pointer-events: none;
+}
+
+.todo-item.over-full {
+  border: 3px dashed #666;
+}
+
+input:disabled {
+  background-color: transparent;
+}

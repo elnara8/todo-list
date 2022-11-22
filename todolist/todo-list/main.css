@@ -1,0 +1,160 @@
+@import url("./styles/utilities.css");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  max-width: 336px;
+  margin: 100px auto 50px;
+  outline: 1px solid #c4c4c4;
+  border-top: 28px solid #ffdc40;
+  border-radius: 10px;
+  padding-left: 28px;
+  padding-right: 22px;
+  padding-bottom: 20px;
+}
+
+.container::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 120px;
+  background-image: url("./minion.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.container h1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 14px;
+  margin-bottom: 20px;
+}
+
+.filter {
+  width: 25px;
+  height: 15px;
+  margin-left: auto;
+  margin-right: 8px;
+  margin-bottom: 11px;
+  display: block;
+  outline: none;
+  border: none;
+  background-image: url("./icons/filter-asc.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.todo-list {
+  margin-bottom: 18px;
+  padding-left: 27px;
+  padding-right: 30px;
+  padding-bottom: 8px;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  outline: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.todo-item {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.todo-item.drag-top-dummy {
+  height: 8px;
+}
+
+.todo-content {
+  border: none;
+  outline: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: move;
+  position: relative;
+  flex-grow: 1;
+}
+
+.delete {
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete {
+  background-image: url("./icons/delete.png");
+  height: 20px;
+  width: 20px;
+  margin-left: 8px;
+}
+
+.delete:hover {
+  background-image: url("./icons/delete-active.png");
+}
+
+.add-todo {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  position: relative;
+  background-color: #833ae0;
+  border: none;
+  border-radius: 71px;
+  max-width: 150px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.add-todo::before {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  content: "+";
+  background-color: #9953f1;
+}
+
+@media only screen and (max-width: 1120px) {
+  body {
+    background-position: bottom;
+  }
+}
